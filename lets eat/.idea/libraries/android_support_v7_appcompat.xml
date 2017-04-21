@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="android-support-v7-appcompat">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/Apps/Developer Kits/Android SDK/sdk/extras/android/support/v7/appcompat/libs/android-support-v7-appcompat.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Apps/Developer Kits/Android SDK/sdk/extras/android/support/v7/gridlayout/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Apps/Developer Kits/Android SDK/sdk/extras/android/support/v7/mediarouter/libs/android-support-v7-mediarouter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

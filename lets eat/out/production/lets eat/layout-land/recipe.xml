@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:background="@drawable/wood"
+                android:orientation="vertical"
+                android:id="@+id/recipe_parent_container">
+
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/backgroundView"/>
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <FrameLayout
+                    android:id="@+id/recipe_info_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    android:layout_weight="1">
+
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/recipe_ingredients_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/profile_tab_container"
+                    android:padding="5dp">
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

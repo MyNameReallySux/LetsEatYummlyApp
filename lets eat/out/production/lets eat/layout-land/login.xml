@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/salad_banner"
+        tools:context=".Main">
+
+
+    <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="250dp"
+                android:id="@+id/banner_text"
+                android:layout_gravity="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/lets_eat_banner_text"/>
+
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/welcome"
+                    android:src="@drawable/welcome_text"
+                    android:contentDescription="Welcome"
+                    android:layout_above="@+id/tableLayout"
+                    android:layout_centerHorizontal="true"/>
+
+            <TableLayout
+                    style="@style/box_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tableLayout"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                    <EditText
+                            style="@style/box_white.input.email"
+                            android:id="@+id/enterEmail"
+                            android:ems="10"/>
+
+                </TableRow>
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                    <EditText
+                            style="@style/box_white.input.pass"
+                            android:id="@+id/enterPassword"
+                            android:ems="10"/>
+
+                </TableRow>
+
+
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                    <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal">
+
+                        <Button
+                                style="@style/small_button.green"
+                                android:text="@string/login"
+                                android:id="@+id/login_button"
+                                android:onClick="login"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"/>
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/not_yet_registered"
+                    android:src="@drawable/not_yet_registered"
+                    android:contentDescription="Not Yet Registered"/>
+
+            <Button
+                    style="@style/small_button.green"
+                    android:text="@string/signup"
+                    android:id="@+id/signup_button"
+                    android:onClick="register"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

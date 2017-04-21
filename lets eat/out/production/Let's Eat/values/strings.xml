@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Let\'s Eat</string>
+    <string name="signup_title">Sign Up</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="status_label">Status:</string>
+    <string name="result_label">Results:</string>
+
+    <string name="recipe_label">Recipes</string>
+    <string name="review_label">Review</string>
+    <string name="photo_label">Photos</string>
+
+    <string name="get_ready">Ready To Eat?</string>
+
+    <string name="email_hint">Enter Email</string>
+    <string name="password_hint">Enter Password</string>
+
+    <string name="first_name_hint">Enter First Name</string>
+    <string name="last_name_hint">Enter Last Name</string>
+
+    <string name="action_menu">Menu</string>
+    <string name="join_date_label">Join Date:</string>
+    <string name="join_date">March 15th, 1990</string>
+
+</resources>

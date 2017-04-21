@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/global_padding">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/recipe_photo_container">
+
+        <LinearLayout
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:maxWidth="400dp"
+                android:padding="5dp"
+                android:background="@drawable/box_white">
+
+            <ImageView
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/recipe_image"
+                    />
+        </LinearLayout>
+
+        <com.sux.widgets.SuxTextView
+                android:id="@+id/recipe_name"
+                typeface="forte"
+                style="@style/headline.recipe_name"/>
+
+    </FrameLayout>
+
+</LinearLayout>

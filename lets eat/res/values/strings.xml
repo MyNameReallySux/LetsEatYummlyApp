@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Let\'s Eat</string>
+    <string name="signup_title">Sign Up</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="status_label">Status:</string>
+    <string name="result_label">Results:</string>
+
+    <string name="recipe_label">Recipes</string>
+    <string name="review_label">Review</string>
+    <string name="photo_label">Photos</string>
+
+    <string name="get_ready">Ready To Eat?</string>
+
+    <string name="email_hint">\"email@domain.net\"</string>
+    <string name="password_hint">\"password\"</string>
+    <string name="password_hint2">\"re-enter password\"</string>
+
+    <string name="first_name_hint">\"Joe\" - first name</string>
+    <string name="last_name_hint">\"Smith\" - last name</string>
+
+    <string name="action_menu">Menu</string>
+    <string name="log_off">Log Off</string>
+    <string name="log_off_message">Are you sure you want to log off?</string>
+    <string name="go_to">Go To&#8230;</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="profile">Profile</string>
+    <string name="recipe">Recipe</string>
+
+    <string name="join_date_label">Join Date:</string>
+    <string name="join_date">March 15th, 1990</string>
+
+    <string name="ready_to_eat">Ready to Eat?</string>
+    <string name="search_hint">Search recipes...</string>
+    <string name="action_search">Search</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - lets_eat@www.detailingbywayne.com" uuid="6438a686-ea57-4e59-8bdf-a8eda1c2199d">
+      <user-name>lets_eat</user-name>
+      <user-password>dfffdfc4dfc3dfdedfd3df99df9bdf9fdf93df9adf8f</user-password>
+      <schema-pattern>lets_eat.*</schema-pattern>
+      <default-schemas>lets_eat.*</default-schemas>
+      <ssh-properties>
+        <enabled>false</enabled>
+        <proxy-host>69.113.14.126</proxy-host>
+        <proxy-port>3306</proxy-port>
+        <user>lets_eat</user>
+        <use-password>true</use-password>
+        <password>dfffdfc4dfc3dfdedfd3df99df9bdf9fdf93df9adf8f</password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - lets_eat@www.detailingbywayne.com" uuid="6438a686-ea57-4e59-8bdf-a8eda1c2199d">
+    <database-info product="MySQL" version="5.5.32-cll-lve" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="lets_eat"/>
+    <table name="albums" schema="" catalog="lets_eat" type="TABLE">
+      <column name="albumID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="albumName" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="creationDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="albumID"/>
+      <exported-key name="fk_photos_albums1" table="photos" schema="" catalog="lets_eat" columns="albumID"/>
+      <index name="albumID_UNIQUE" unique="true" columns="albumID"/>
+    </table>
+    <table name="block" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="blockID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="blockDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="blockID,userID"/>
+      <foreign-key name="fk_block_users1" columns="userID" ref-table="users" ref-schema="" ref-catalog="lets_eat" ref-columns="userID" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="friends" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="friendID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="requestDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="accepted" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="friendID,userID"/>
+      <foreign-key name="fk_friendstable_usertable" columns="userID" ref-table="users" ref-schema="" ref-catalog="lets_eat" ref-columns="userID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="friendID_UNIQUE" unique="true" columns="friendID"/>
+      <index name="userID_UNIQUE" unique="true" columns="userID"/>
+    </table>
+    <table name="notifications" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="senderID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="sendTime" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="read" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="userID,senderID,sendTime"/>
+    </table>
+    <table name="password" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="password" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12"/>
+      <column name="failedDate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="failedAttempts" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="fk_password_users1" columns="userID" ref-table="users" ref-schema="" ref-catalog="lets_eat" ref-columns="userID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="userID_UNIQUE" unique="true" columns="userID"/>
+    </table>
+    <table name="photos" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="pictureID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fileName" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="albumID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="uploadDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="pictureID,userID"/>
+      <foreign-key name="fk_photos_albums1" columns="albumID" ref-table="albums" ref-schema="" ref-catalog="lets_eat" ref-columns="albumID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_photos_users1" columns="userID" ref-table="users" ref-schema="" ref-catalog="lets_eat" ref-columns="userID" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="users" schema="" catalog="lets_eat" type="TABLE">
+      <column name="userID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fName" sqlType="VARCHAR" length="24" precision="0" nullable="false" jdbcType="12"/>
+      <column name="lName" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12"/>
+      <column name="country" sqlType="VARCHAR" length="40" precision="0" nullable="false" jdbcType="12"/>
+      <column name="birthDate" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="gender" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1"/>
+      <column name="email" sqlType="VARCHAR" length="60" precision="0" nullable="false" jdbcType="12"/>
+      <column name="profilePic" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="lastIP" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="lastLogin" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="lastNoteCheck" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="signUp" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1" def="JzAn"/>
+      <column name="level" sqlType="ENUM" length="2" precision="0" nullable="false" jdbcType="1" def="J2En"/>
+      <primary-key name="PRIMARY" columns="userID"/>
+      <exported-key name="fk_block_users1" table="block" schema="" catalog="lets_eat" columns="userID"/>
+      <exported-key name="fk_friendstable_usertable" table="friends" schema="" catalog="lets_eat" columns="userID"/>
+      <exported-key name="fk_password_users1" table="password" schema="" catalog="lets_eat" columns="userID"/>
+      <exported-key name="fk_photos_users1" table="photos" schema="" catalog="lets_eat" columns="userID"/>
+    </table>
+  </data-source>
+</component>

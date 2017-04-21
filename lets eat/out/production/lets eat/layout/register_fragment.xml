@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ready_to_eat"
+            android:src="@drawable/ready_to_eat"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/ready_to_eat"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ready_to_eat"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:baselineAligned="false">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:background="@drawable/box_white">
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/nameResults"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#9d9d9d"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/enterFirstName"
+                    android:hint="@string/first_name_hint"
+                    style="@style/box_white.input"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_weight="1"/>
+
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/enterLastName"
+                    android:hint="@string/last_name_hint"
+                    style="@style/box_white.input"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:weightSum="1"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="15dp"
+            android:baselineAligned="false">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:background="@drawable/box_white"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/emailResults"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#9d9d9d"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            <EditText
+                    style="@style/box_white.input.email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enterEmail"
+                    android:hint="@string/email_hint"
+                    android:layout_weight="3"
+                    android:layout_marginBottom="15dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:weightSum="1"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout2"
+            android:baselineAligned="false">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.7"
+                android:weightSum="1"
+                android:background="@drawable/box_white"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/passwordResult"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#9d9d9d"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
+
+            <EditText
+                    style="@style/box_white.input.pass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enterPassword"
+                    android:hint="@string/password_hint"
+                    android:layout_weight="3"
+                    android:inputType="textPassword"/>
+
+            <EditText
+                    style="@style/box_white.input.pass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enterPassword2"
+                    android:hint="@string/password_hint2"
+                    android:layout_weight="3"
+                    android:inputType="textPassword"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+            style="@style/small_button.green"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/signup"
+            android:id="@+id/signupButton"
+            android:onClick="register"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

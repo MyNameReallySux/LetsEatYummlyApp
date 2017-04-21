@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LetsEat" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:itemTextAppearance">@style/ItemText</item>
+        <item name="android:actionMenuTextColor">#ffffff</item>
+
+    </style>
+
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/gradient_green</item>
+        <item name="android:titleTextStyle">@style/TitleText</item>
+    </style>
+
+    <style name="TitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#009900</item>
+    </style>
+
+    <style name="ItemText">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="box_white">
+        <item name="android:background">@drawable/box_white</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="box_shadow">
+        <item name="android:background">@drawable/box_shadow</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="box_white.input">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@drawable/textbox</item>
+    </style>
+
+    <style name="box_white.input.email">
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:hint">@string/email_hint</item>
+        <item name="android:fontFamily">Arial</item>
+    </style>
+
+    <style name="box_white.input.pass">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:hint">@string/password_hint</item>
+        <item name="android:fontFamily">Arial</item>
+    </style>
+
+    <style name="box_shadow.input">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="box_shadow.input.email">
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:hint">@string/email_hint</item>
+        <item name="android:fontFamily">Arial</item>
+    </style>
+
+    <style name="box_shadow.input.pass">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:hint">@string/password_hint</item>
+        <item name="android:fontFamily">Arial</item>
+    </style>
+
+    <style name="headline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="headline.recipe_name">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowColor">#000000</item>
+    </style>
+
+    <style name="small_button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <style name="small_button.green">
+        <item name="android:background">@drawable/button_green</item>
+    </style>
+
+    <style name="user_photo">
+        <item name="android:src">@drawable/no_pic</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="user_photo.sm_profile">
+        <item name="android:layout_width">125dp</item>
+        <item name="android:layout_height">135dp</item>
+    </style>
+</resources>
